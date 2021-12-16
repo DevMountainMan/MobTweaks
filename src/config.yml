@@ -1,0 +1,21 @@
+# Welcome to the MobTweaks Plugin Config
+# Feel free to modify this file to suit your mob needs
+
+enablePlugin: true #Set to false if you want to disable to plugin
+
+# Friendly Mob Section
+breedMultiplierApply: #Add or remove mobs that are affected by the breedMultiplier
+  - "COW"
+  - "CHICKEN"
+  - "SHEEP"
+  - "GOAT"
+
+breedMultiplier: 50 # Max is 10
+breedMultiplyChance: 1 # This value should be between 0 and 1. Default is .5
+
+enableRandomSheep: true
+randomSheepChance: 1
+
+friendlyDropMultiplier: 2 # Max is 10
+friendlyDropMultiplyChance: .5 # This value should be between 0 and 1. Default is .5
+

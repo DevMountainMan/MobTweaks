@@ -1,0 +1,5 @@
+name: MobTweaks
+version: 0.0.1
+author: DevMountainMan
+main: com.devmountainman.mobtweaks.MobTweaks
+api-version: 1.14
