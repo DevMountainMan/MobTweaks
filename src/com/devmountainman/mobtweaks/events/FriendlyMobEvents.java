@@ -21,8 +21,6 @@ public class FriendlyMobEvents implements Listener {
 
         Bukkit.getConsoleSender().sendMessage(consolePrefix + eventPrefix + "Entity: " + e.getEntity().getType());
         if(breedMultiplierApply.contains(e.getEntity().getType().toString())){
-
-            //Bukkit.getServer().getConsoleSender().sendMessage(consolePrefix + "MOB QUALIFIES FOR BREED MULTIPLIER.");
             World eWorld = e.getEntity().getWorld();
             Location eLocation = e.getEntity().getLocation();
             Random rng = new Random(System.currentTimeMillis());
@@ -48,17 +46,9 @@ public class FriendlyMobEvents implements Listener {
 
     @EventHandler
     public static void onDeath(EntityDeathEvent e){
-
         if(breedMultiplierApply.contains(e.getEntity().getType().toString())){
-
-            Bukkit.getConsoleSender().sendMessage(consolePrefix +
-                    ChatColor.LIGHT_PURPLE + "[DEATH]" + ChatColor.WHITE + "Loot: " + e.getDrops());
-
             Random rng = new Random(System.currentTimeMillis());
-
             if (rng.nextDouble() <= friendlyDropMultiplyChance){
-                Bukkit.getConsoleSender().sendMessage(consolePrefix +
-                        ChatColor.LIGHT_PURPLE + "[DEATH]" + ChatColor.WHITE + "DROP MULTIPLIER SUCCESS");
                 for(ItemStack i: e.getDrops()){
                     i.setAmount(i.getAmount() * friendlyDropMultiplier);
                 }

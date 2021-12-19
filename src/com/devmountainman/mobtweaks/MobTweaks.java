@@ -60,7 +60,7 @@ public class MobTweaks extends org.bukkit.plugin.java.JavaPlugin{
         }
         friendlyDropMultiplyChance = config.getDouble("friendlyDropMultiplyChance");
         if(friendlyDropMultiplyChance > 1 || friendlyDropMultiplyChance < 0){ // Set default if invalid value
-            breedMultiplyChance = .5;
+            friendlyDropMultiplyChance = .1;
         }
 
         getServer().getConsoleSender().sendMessage(consolePrefix + "Thanks for using MobTweaks!");
