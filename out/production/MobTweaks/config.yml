@@ -4,18 +4,27 @@
 enablePlugin: true #Set to false if you want to disable to plugin
 
 # Friendly Mob Section
+breedMultiplier: 2 # Max is 10
+breedMultiplyChance: .5 # This value should be between 0 and 1. Default is .5
 breedMultiplierApply: #Add or remove mobs that are affected by the breedMultiplier
   - "COW"
   - "CHICKEN"
   - "SHEEP"
   - "GOAT"
-
-breedMultiplier: 50 # Max is 10
-breedMultiplyChance: 1 # This value should be between 0 and 1. Default is .5
-
-enableRandomSheep: true
-randomSheepChance: 1
+  - "BEE"
+  - "PARROT"
+  - "AXOLOTL"
 
 friendlyDropMultiplier: 2 # Max is 10
 friendlyDropMultiplyChance: .5 # This value should be between 0 and 1. Default is .5
+friendlyDropMultiplierApply: #Add or remove mobs that are affected by the friendlyDropMultiplierApply
+  - "COW"
+  - "CHICKEN"
+  - "SHEEP"
+  - "GOAT"
+  - "BEE"
+  - "PARROT"
+  - "AXOLOTL"
 
+enableRandomSheep: true
+randomSheepChance: .1

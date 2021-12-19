@@ -20,6 +20,7 @@ public class MobTweaks extends org.bukkit.plugin.java.JavaPlugin{
     public static double breedMultiplyChance;
     public static int friendlyDropMultiplier;
     public static double friendlyDropMultiplyChance;
+    public static List<String> friendlyDropMultiplierApply;
     public static boolean enableRandomSheep;
     public static double randomSheepChance;
 
@@ -41,6 +42,9 @@ public class MobTweaks extends org.bukkit.plugin.java.JavaPlugin{
 
         breedMultiplierApply = config.getStringList("breedMultiplierApply");
         breedMultiplier = config.getInt("breedMultiplier");
+        if(breedMultiplier > 10 || breedMultiplier < 1){
+            breedMultiplier = 2;
+        }
         breedMultiplyChance = config.getDouble("breedMultiplyChance");
         if(breedMultiplyChance > 1 || breedMultiplyChance < 0){ // Set default if invalid value
             breedMultiplyChance = .5;
@@ -49,21 +53,17 @@ public class MobTweaks extends org.bukkit.plugin.java.JavaPlugin{
         enableRandomSheep = config.getBoolean("enableRandomSheep");
         randomSheepChance = config.getDouble("randomSheepChance");
 
+        friendlyDropMultiplierApply = config.getStringList("friendlyDropMultiplierApply");
         friendlyDropMultiplier = config.getInt("friendlyDropMultiplier");
+        if(friendlyDropMultiplier > 5 || friendlyDropMultiplier < 1){
+            friendlyDropMultiplier = 2;
+        }
         friendlyDropMultiplyChance = config.getDouble("friendlyDropMultiplyChance");
         if(friendlyDropMultiplyChance > 1 || friendlyDropMultiplyChance < 0){ // Set default if invalid value
             breedMultiplyChance = .5;
         }
 
-        // Debug info, checking config values.
-        getServer().getConsoleSender().sendMessage(consolePrefix + "Enabled");
-        getServer().getConsoleSender().sendMessage(consolePrefix + "enableTeaks: " + enableTweaks);
-        getServer().getConsoleSender().sendMessage(consolePrefix + "breedMultiplier: " + breedMultiplier);
-        getServer().getConsoleSender().sendMessage(consolePrefix + "breedMultiplierApply: " + breedMultiplierApply);
-        getServer().getConsoleSender().sendMessage(consolePrefix + "breedMultiplyChance: " + breedMultiplyChance);
-        getServer().getConsoleSender().sendMessage(consolePrefix + "friendlyDropMultiplier: " + friendlyDropMultiplier);
-        getServer().getConsoleSender().sendMessage(consolePrefix + "friendlyDropMultiplyChance: " + friendlyDropMultiplyChance);
-
+        getServer().getConsoleSender().sendMessage(consolePrefix + "Thanks for using MobTweaks!");
         getServer().getPluginManager().registerEvents(new FriendlyMobEvents(), this);
     }
 
