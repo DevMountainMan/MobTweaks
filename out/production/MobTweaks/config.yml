@@ -1,10 +1,10 @@
 # Welcome to the MobTweaks Plugin Config
 # Feel free to modify this file to suit your mob needs
 
-enablePlugin: true #Set to false if you want to disable to plugin
+enablePlugin: true #Set to false if you want to disable the plugin
 
 # Friendly Mob Section
-breedMultiplier: 2 # Max is 10
+breedMultiplier: 2 # Must be between 1 and 10, default is 2
 breedMultiplyChance: .5 # This value should be between 0 and 1. Default is .5
 breedMultiplierApply: #Add or remove mobs that are affected by the breedMultiplier
   - "COW"
@@ -15,9 +15,9 @@ breedMultiplierApply: #Add or remove mobs that are affected by the breedMultipli
   - "PARROT"
   - "AXOLOTL"
 
-friendlyDropMultiplier: 2 # Max is 10
-friendlyDropMultiplyChance: .5 # This value should be between 0 and 1. Default is .5
-friendlyDropMultiplierApply: #Add or remove mobs that are affected by the friendlyDropMultiplierApply
+friendlyDropMultiplier: 2 # Must be between 1 and 5, default is 2
+friendlyDropMultiplyChance: .1 # This value should be between 0 and 1. Default is .1
+friendlyDropMultiplierApply: #Add or remove mobs that are affected by the friendlyDropMultiplier
   - "COW"
   - "CHICKEN"
   - "SHEEP"
@@ -26,5 +26,5 @@ friendlyDropMultiplierApply: #Add or remove mobs that are affected by the friend
   - "PARROT"
   - "AXOLOTL"
 
-enableRandomSheep: true
-randomSheepChance: .1
+enableRandomSheep: true # Enables the random sheep color feature
+randomSheepChance: .1 # Chance a bred sheep will spawn with random color wool
